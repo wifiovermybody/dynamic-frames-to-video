@@ -5,7 +5,7 @@
 ![Convert2](https://github.com/wifiovermybody/dynamic-frames-to-video/blob/main/convert2.png)
 ## Dynamic Frames to Video
 
-* At the core very basic frame to video script.
+* Basic frame to video script with ability to configure fps.
 * Converts a series of image frames into video files. It outputs two video formats: H.264 (.mp4) and ProRes (.mov). The user can specify either the desired frame rate (frames per second) or the total duration (in seconds) for the resulting video.
 
 ## Notes 
