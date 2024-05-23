@@ -8,27 +8,36 @@
 ## Notes 
 * It shouldn't matter how your image sequences is named. Eg. 0000001.png, frame_0002.png, etc AND it does not matter if your file does not start at 0 or 1. eg. 00053.png is the first frame. <br/>
 * This script also has the ability to compile your frames into a specifc duration video. Ie. If there are 1200 frames, and you input 3 seconds on launch - it will compile all 1200 frames into the 3 second video file. <br/>
+* This script should help automate the process of converting a sequence of image frames into video files with user-defined frame rate or duration, making it a useful tool for various video processing tasks.
 
 ## Prerequisites
 
-* ffmpeg: Install ffmpeg on your system. You can download it from ffmpeg.org or install it using a package manager like brew on macOS (brew install ffmpeg).
+- **ffmpeg-python**: Install the `ffmpeg-python` library:
 
-## Script Usage
+  ```bash
 
-* Save the Script: Save the script to a file, e.g., frames_to_video.py.
-* Prepare Your Frames Directory: Ensure you have a directory containing your image frames. The frames should follow a sequential naming convention like frame_0001.png, frame_0002.png, or 00000007.png, 00000008.png, etc.
+  pip install ffmpeg-python
 
 ## Running the Script
 
-Open your terminal, type python3 (include space) and drag your frames_to_video.py into the terminal which will paste the path name, then paste the pathname of where your sequentional PNG sequence is location 
+1. Prepare Your Frames Directory: Ensure you have a directory containing your image frames. The frames should follow a sequential naming convention like frame_0001.png, frame_0002.png, or 00000007.png, 00000008.png, etc.
 
-```python3 /path/to/file/frames_to_video.py <path_to_frames_directory>```
+2. Open your terminal, type python3 (include space) and drag your frames_to_video.py into the terminal which will paste the path name, then paste the pathname of where your sequentional PNG sequence is location 
+
+  ```bash
+
+python3 /path/to/file/frames_to_video.py <path_to_frames_directory>
+```
 
 For example:
 
-```python3 /Users/Kynan/Scripts/frames_to_video.py /Users/Kynan/output_frames```
+  ```bash
+python3 /Users/Kynan/Scripts/frames_to_video.py /Users/Kynan/output_frames
 
-What the Script Does
+```
+
+
+## What the Script Does
 
 1. Validates Input Directory: Checks if the specified frames directory exists.
 2. Determines Frame Pattern: Identifies the naming pattern of the image frames, the starting frame number, and the total number of frames.
@@ -39,6 +48,5 @@ What the Script Does
 7. H.264 encoded video (.mp4)
 8. ProRes encoded video (.mov)
 
-## Additional Notes
 
-This script should help automate the process of converting a sequence of image frames into video files with user-defined frame rate or duration, making it a useful tool for various video processing tasks.
+
